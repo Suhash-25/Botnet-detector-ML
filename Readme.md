@@ -1,101 +1,71 @@
-🛡️ BotGuard - Botnet Traffic Detector
-This project is a Machine Learning powered Botnet Traffic Detector built with React (frontend) and Flask (backend).
-🛡️ Botnet Traffic Detector
+BotGuard: ML-Powered Botnet Traffic Detector
 
-This project is a Machine Learning powered Botnet Traffic Detector built with React (frontend) and Flask (backend).
-It is trained on the CTU-13 dataset, which contains both normal and malicious (botnet attack) traffic data.
+This project is a Machine Learning powered Botnet Traffic Detection System built using the CTU-13 dataset.
+The CTU-13 dataset contains both normal network traffic and malicious botnet traffic.
 
-The app allows users to input 57 space-separated numerical features and predicts whether the traffic is:
+Our ML model is trained on 57 numerical features that represent network flow characteristics and is capable of classifying traffic as:
 
-✅ Normal Traffic
+>✅ Normal Traffic
 
-🚨 Attack Traffic
+>🚨 Attack Traffic (Botnet)
 
-✨ Features
+The project consists of a Flask backend (for serving the ML model) and a React + Vite frontend (for user interaction), styled with DaisyUI + TailwindCSS.
 
-📊 ML model trained on CTU-13 dataset
+📊 Features
 
-🌐 Interactive frontend with React, Tailwind, DaisyUI
+(1)Machine Learning Model trained on 57 CTU-13 features.
+(2)Prediction API served via Flask.
+(3)Interactive Frontend built with React, Vite, and DaisyUI.
+(4)CSV Downloads for testing with Normal Traffic & Attack Traffic samples.
+(5)Visual Output with prediction result + probability bars.
+(6)Ready for Deployment.
 
-🔥 Backend with Flask + scikit-learn/XGBoost
+Model Information
 
-📂 Downloadable sample CSV files (Normal & Attack traffic)
+Dataset: CTU-13 Botnet Traffic Dataset
+Features Used: 57 numerical features (network flow statistics)
 
-🎯 Visual results with probability progress bars
+Labels:
 
-📸 Demo Screenshot
+0 → Normal Traffic
 
-(Add a screenshot of your running app here)
+1 → Attack Traffic
 
-🚀 How to Use
+Algorithm: (e.g., Random Forest, Logistic Regression, XGBoost .
 
-Download the sample CSV files (Normal & Attack traffic) from the app.
+Final prediction (Normal or Attack)
 
-Copy a row (57 values) from the CSV or your own dataset.
+Probability scores (confidence of classification)
 
-Paste it into the big input box in the app.
+How to Use
 
-Click Predict to see the result.
+Download the sample CSV files (Normal & Attack) from the UI.
 
-🛠️ Installation & Setup
-🔹 Backend (Flask)
-# Navigate to backend folder
-cd backend
+Copy a row (57 space-separated values) from the CSV.
 
-# Create venv (optional but recommended)
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
+Paste the row into the big input box on the web app.
 
-# Install dependencies
-pip install -r requirements.txt
+Click Predict.
 
-# Run Flask server
-python app.py
+View results:
 
-🔹 Frontend (React + Vite)
-# Navigate to frontend folder
-cd frontend
+       ✅ Prediction = 0 → Normal Traffic
 
-# Install dependencies
-npm install
+       🚨 Prediction = 1 → Attack Traffic
 
-# Run frontend
-npm run dev
+         Probabilities are shown with progress bars for better visualization.
 
-📂 Project Structure
-Botnet-Detector/
-│── backend/           # Flask backend
-│   ├── app.py         # Flask app entry
-│   ├── model.pkl      # ML model (ignored if too large)
-│   └── requirements.txt
-│
-│── frontend/          # React frontend
-│   ├── src/
-│   │   ├── pages/
-│   │   │   └── Home.jsx
-│   │   ├── components/
-│   │   │   ├── InputForm.jsx
-│   │   │   └── ResultCard.jsx
-│   └── public/
-│       ├── CTU13_Normal_Traffic.csv
-│       └── CTU13_Attack_Traffic.csv
-│
-└── README.md
+Tech Stack
 
-📊 Dataset
+1.Machine Learning: scikit-learn, NumPy
 
-The model is trained on the CTU-13 Botnet dataset, which contains captures of normal and botnet-infected traffic.
-👉 Learn more about CTU-13 Dataset
+2.Backend: Flask (Python)
 
-⚡ Future Improvements
+3.Frontend: React + Vite, DaisyUI, TailwindCSS
 
-📂 Upload CSV directly in the app for batch predictions
+4.Deployment: Render
 
-📉 Show confusion matrix & metrics on frontend
+Author
 
-☁️ Deploy on Heroku / Render / Vercel for public use
+Siddharth Chaudhary
 
-👨‍💻 Author
-
-Developed with ❤️ by Siddharth
