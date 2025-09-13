@@ -1,0 +1,36 @@
+# Node modules (frontend)
+node_modules/
+dist/
+.env
+.env.local
+
+# Python (backend)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.h5
+*.egg-info/
+.venv/
+venv/
+ENV/
+
+# Ignore all pickle files except the main model
+*.pkl
+!backend/best_botnet_model.pkl
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build & cache
+.cache/
+coverage/
