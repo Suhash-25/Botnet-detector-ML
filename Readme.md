@@ -63,9 +63,3 @@ Tech Stack
 
 3.Frontend: React + Vite, DaisyUI, TailwindCSS
 
-4.Deployment: Render
-
-Author
-
-Siddharth Chaudhary
-
