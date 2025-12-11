@@ -13,7 +13,20 @@ export default function InputForm({ onResult }) {
     setLoading(true);
 
     const values = inputText.trim().split(/\s+/);
-    const numericValues = values.map((v) => (isNaN(v) ? v : Number(v)));
+    
+    if (values.length !== 57) {
+      alert("Please enter exactly 57 values");
+      setLoading(false);
+      return;
+    }
+
+    const numericValues = values.map((v) => Number(v));
+    
+    if (numericValues.some(isNaN)) {
+      alert("All values must be numeric");
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await axios.post(`${API_BASE}/predict`, {
@@ -81,4 +94,3 @@ export default function InputForm({ onResult }) {
     </form>
   );
 }
-    

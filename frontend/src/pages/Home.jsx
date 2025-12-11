@@ -55,16 +55,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="mt-12 text-center text-sm opacity-80">
         <p>
-          Made with ❤️ by <span className="font-semibold">Siddharth</span>
+          Made by <span className="font-semibold">Team Kascade</span>
         </p>
-        <a
-          href="www.linkedin.com/in/siddharth-chaudhary-cs"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="link link-primary"
-        >
-          View on GitHub
-        </a>
       </footer>
     </div>
   );
